@@ -1,6 +1,15 @@
-<%- include('header'); -%>
-<h1>Home</h1>
+<%- include('partials/header'); -%>
+<h1>Welcome to Math Note-Taker</h1>
 <% for(var i = 0; i < fillerText.length; ++i) { %>
     <p><%=fillerText[i]%></p>
 <%}%>
-<%- include('footer'); -%>
+<% for(var k = 0; k < pst.length; ++k) { %>
+    <div>
+    <h2><%=pst[k].title%></h2>
+    <p><%=pst[k].body%></p>
+    <form action="/" method="post">
+        <button name="something">X</button>
+    </form>
+    </div>
+<%}%>
+<%- include('partials/footer'); -%>
